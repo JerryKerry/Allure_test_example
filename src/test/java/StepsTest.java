@@ -16,7 +16,6 @@ public class StepsTest {
     private static final String REPOSITORY = "JerryKerry/Working_with_files";
     private static final int ISSUE = 1;
 
-
     @Test
     public void testLambdaStep(){
         step("Открываем главную страницу", () -> {
@@ -50,7 +49,4 @@ public class StepsTest {
         steps.openIssuesTab();
         steps.shouldSeeIssueWithNumber(ISSUE);
     }
-
-
-
 }

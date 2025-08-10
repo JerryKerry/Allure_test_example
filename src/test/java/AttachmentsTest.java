@@ -38,7 +38,6 @@ public class AttachmentsTest {
         });
     }
 
-
     @Test
     public void testAnnotatedStep(){
         WebSteps steps = new WebSteps();
