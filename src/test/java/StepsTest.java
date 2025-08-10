@@ -33,7 +33,7 @@ public class StepsTest {
         step("Открываем таб Issues", () -> {
             $("#issues-tab").click();
         });
-        step("Проверяем наличие Issue с номером" + ISSUE, () -> {
+        step("Проверяем наличие Issue с номером " + ISSUE, () -> {
             $(withText("#" + ISSUE)).should(Condition.exist);
         });
     }
