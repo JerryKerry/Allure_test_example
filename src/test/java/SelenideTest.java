@@ -21,7 +21,6 @@ public class SelenideTest {
     public void testIssueSearch(){
         SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://github.com");
-
         $(".search-input-container").click();
         $( "#query-builder-test").sendKeys("JerryKerry/Working_with_files");
         $( "#query-builder-test").submit();
