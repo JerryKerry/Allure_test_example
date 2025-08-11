@@ -16,10 +16,10 @@ public class StepsTest {
     @Test
     public void testLambdaStep(){
         step("Открываем главную страницу", () -> {
+            SelenideLogger.addListener("allure", new AllureSelenide());
+
             open("https://github.com");
         });
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Ищем репозиторий " + REPOSITORY, () -> {
             $(".search-input-container").click();
@@ -39,6 +39,7 @@ public class StepsTest {
 
     @Test
     public void testAnnotatedStep(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
